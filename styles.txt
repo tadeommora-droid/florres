@@ -1,0 +1,84 @@
+body {
+    background: #f8e1a1;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    max-width: 90%;
+}
+
+h1 {
+    color: #ffd700;
+    font-size: 2.5em;
+    animation: bounceIn 1.5s;
+}
+
+p {
+    color: #6a6a6a;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.flowers {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+}
+
+#playButton {
+    background-color: #ffd700;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#playButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.play-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
